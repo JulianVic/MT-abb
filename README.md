@@ -1,97 +1,82 @@
-# Simulación de una Máquina de Turing con Interfaz Gráfica
+# Turing Machine Simulation with Graphical Interface
 
-## Descripción
+## Description
 
-Este proyecto implementa una **Máquina de Turing (MT)** en Python con una interfaz gráfica desarrollada en **Tkinter**. La MT valida cadenas que siguen el patrón $(ab^2)^n$, donde $n > 0$. El sistema permite al usuario ingresar cadenas, validarlas y visualizar los resultados en una tabla interactiva.
+This project implements a **Turing Machine (TM)** in Python with a graphical interface developed using **Tkinter**. The TM validates strings that follow the pattern $(ab^2)^n$, where $n > 0$. The system allows the user to input strings, validate them, and visualize the results in an interactive table.
 
-### Características:
-- Valida cadenas que cumplen con el patrón $(ab^2)^n$.
-- Proporciona una interfaz gráfica para ingresar cadenas y ver resultados.
-- Simula el comportamiento de una MT con expansión dinámica de la cinta y movimientos de la cabeza de lectura.
-  
-## Requisitos
+### Features:
+- Validates strings that follow the pattern $(ab^2)^n$.
+- Provides a graphical interface for entering strings and viewing results.
+- Simulates the behavior of a TM with dynamic tape expansion and movement of the reading head.
 
-Para ejecutar el proyecto necesitas tener instalado:
+## Requirements
+
+To run the project, you need to have installed:
 
 - **Python 3.x**
-- **Tkinter** (viene preinstalado con la mayoría de las distribuciones de Python)
+- **Tkinter** (pre-installed with most Python distributions)
 
-## Instalación
+## Installation
 
-1. Clona este repositorio en tu máquina local:
+1. Clone this repository to your local machine:
     ```bash
-    git clone https://github.com/tu-usuario/tu-repositorio.git
-    cd tu-repositorio
+    git clone https://github.com/your-username/your-repository.git
+    cd your-repository
     ```
 
-2. Asegúrate de que tienes **Python** instalado. Si no lo tienes, puedes descargarlo [aquí](https://www.python.org/downloads/).
+2. Ensure you have **Python** installed. If not, you can download it [here](https://www.python.org/downloads/).
 
-3. Ejecuta el archivo principal del proyecto:
+3. Run the main project file:
     ```bash
     python main.py
     ```
 
-## Uso
+## Usage
 
-1. Ejecuta el archivo principal. Aparecerá una ventana con el título **MT abb**.
-2. Ingresa una cadena en el campo de texto.
-3. Haz clic en el botón **Validar**.
-4. El resultado de la validación (válido/inválido) aparecerá en la tabla.
+1. Run the main file. A window titled **MT abb** will appear.
+2. Enter a string in the text field.
+3. Click the **Validate** button.
+4. The validation result (valid/invalid) will appear in the table.
 
-### Ejemplos de cadenas válidas:
+### Examples of valid strings:
 
 - `abb`
 - `abbabb`
 - `abbabbabb`
 
-### Ejemplos de cadenas no válidas:
+### Examples of invalid strings:
 
 - `ab`
 - `abbb`
 - `aaabb`
 
-## Diagrama de la Máquina de Turing
+## Turing Machine Diagram
 
-Aquí tienes el diagrama de la Máquina de Turing que sigue el patrón $(ab^2)^n$:
+Here is the Turing Machine diagram that follows the pattern $(ab^2)^n$:
 
-![Diagrama de la MT](mt-design-jflap.png)
+![Turing Machine Diagram](mt-design-jflap.png)
 
-## Detalles Técnicos
+## Technical Details
 
-### Máquina de Turing
-La MT se define formalmente como una tupla $M = (Q, \Sigma, \Gamma, s, b, F, \delta)$, donde:
-- $Q = \{ q_0, q_1, q_2, q_3, q_4 \}$ es el conjunto finito de estados.
-- $\Sigma = \{ a, b \}$ es el alfabeto de entrada.
-- $\Gamma = \{ a, b, \textvisiblespace \}$ es el alfabeto de la cinta.
-- $s = q_0$ es el estado inicial.
-- $b = \textvisiblespace$ es el símbolo de espacio en blanco.
-- $F = \{ q_4 \}$ es el conjunto de estados de aceptación.
-- $\delta$ es la función de transición que procesa la cinta y avanza la cabeza de la MT.
+### Turing Machine
+The TM is formally defined as a tuple $M = (Q, \Sigma, \Gamma, s, b, F, \delta)$, where:
+- $Q = \{ q_0, q_1, q_2, q_3, q_4 \}$ is the finite set of states.
+- $\Sigma = \{ a, b \}$ is the input alphabet.
+- $\Gamma = \{ a, b, \textvisiblespace \}$ is the tape alphabet.
+- $s = q_0$ is the initial state.
+- $b = \textvisiblespace$ is the blank symbol.
+- $F = \{ q_4 \}$ is the set of accepting states.
+- $\delta$ is the transition function that processes the tape and moves the TM's head.
 
-### Interfaz gráfica
-La interfaz gráfica fue desarrollada utilizando Tkinter y proporciona una experiencia de usuario simple e intuitiva. Las principales funcionalidades son:
-- Campo de texto para ingresar la cadena.
-- Botón **Validar** para ejecutar la MT y ver los resultados.
-- Tabla que muestra si las cadenas ingresadas son válidas o no.
-  
-## Pruebas realizadas
+### Graphical Interface
+The graphical interface was developed using Tkinter and provides a simple and intuitive user experience. The main functionalities are:
+- A text field to input the string.
+- A **Validate** button to run the TM and view results.
+- A table that shows whether the entered strings are valid or not.
 
-El sistema fue probado con varias cadenas para verificar su correcto funcionamiento:
+## Tests Performed
 
-- **Cadenas válidas** como `abb` y `abbabb` fueron correctamente validadas.
-- **Cadenas inválidas** como `ab` y `abbb` fueron rechazadas apropiadamente.
+The system was tested with various strings to verify its correct operation:
 
-## Contribuciones
-
-Si deseas contribuir a este proyecto, sigue estos pasos:
-
-1. Haz un **fork** de este repositorio.
-2. Crea una nueva rama para tu función o corrección de errores.
-    ```bash
-    git checkout -b mi-rama
-    ```
-3. Realiza los cambios y commitea.
-    ```bash
-    git commit -m "Mi contribución"
-    ```
-4. Envía un **pull request** con tus mejoras.
+- **Valid strings** like `abb` and `abbabb` were correctly validated.
+- **Invalid strings** like `ab` and `abbb` were appropriately rejected.
