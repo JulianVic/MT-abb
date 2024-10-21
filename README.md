@@ -20,8 +20,8 @@ To run the project, you need to have installed:
 
 1. Clone this repository to your local machine:
     ```bash
-    git clone https://github.com/your-username/your-repository.git
-    cd your-repository
+    git clone https://github.com/JulianVic/MT-abb
+    cd MT-abb
     ```
 
 2. Ensure you have **Python** installed. If not, you can download it [here](https://www.python.org/downloads/).
